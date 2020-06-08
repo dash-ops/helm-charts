@@ -1,0 +1,13 @@
+apiVersion: v1
+name: dash-ops
+version: 0.0.1
+home: https://github.com/dash-ops/dash-ops
+icon: https://avatars3.githubusercontent.com/u/63665321
+sources:
+- https://github.com/dash-ops/dash-ops
+keywords:
+- kubernetes
+- aws
+maintainers:
+- name: Jhon Mike
+  email: jhon.msdev@gmail.com

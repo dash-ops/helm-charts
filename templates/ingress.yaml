@@ -1,0 +1,21 @@
+{{- if .Values.ingress.enabled}}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  labels:
+    app: {{.Values.name}}
+  name: {{.Values.name}}
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    external-dns.alpha.kubernetes.io/target: {{.Values.ingress.externalDNSTarget | quote}}
+spec:
+  rules:
+  {{- range .Values.ingress.hosts}}
+  - host: {{.host}}
+    http:
+      paths:
+      - backend:
+          serviceName: {{$.Values.name}}
+          servicePort: 80
+  {{- end}}
+{{- end}}

@@ -1,0 +1,23 @@
+name: dash-ops
+image:
+  name: dashops/dash-ops
+  tag: latest
+
+container:
+  limits:
+    memory: 600Mi
+  requests:
+    memory: 600Mi  
+  httpPort: 8080
+  probes:
+    readinessDelay: 60
+    livenessDelay: 180
+    path: /api/health
+  env:
+    DASH_CONFIG: /dash-ops.yaml
+  secrets: {}
+
+ingress:
+  enabled: false
+  externalDNSTarget: traefik.local.
+  hosts: []
