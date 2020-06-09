@@ -2,6 +2,23 @@ apiVersion: v1
 entries:
   dash-ops:
   - apiVersion: v1
+    created: "2020-06-09T05:03:42.652274588Z"
+    digest: a8b123a87bb0e225a099bd24a54aa43b13265e89f9dfd7aafcbd0be8017feb59
+    home: https://github.com/dash-ops/dash-ops
+    icon: https://avatars3.githubusercontent.com/u/63665321
+    keywords:
+    - kubernetes
+    - aws
+    maintainers:
+    - email: jhon.msdev@gmail.com
+      name: Jhon Mike
+    name: dash-ops
+    sources:
+    - https://github.com/dash-ops/dash-ops
+    urls:
+    - https://github.com/dash-ops/helm-charts/releases/download/dash-ops-0.0.2/dash-ops-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v1
     created: "2020-06-09T02:10:16.545476462Z"
     digest: 283dcf69af0f036437c416fca2b35aea31d892b272a1184028596d8e69d2ae5f
     home: https://github.com/dash-ops/dash-ops
