@@ -1,4 +1,4 @@
-# Dash-OPS Helm Chart
+# Dash-OPS Helm Charts
 
 ## Introduction
 
@@ -9,7 +9,7 @@ This chart bootstraps a DashOps deployment on a Kubernetes cluster using the Hel
 ### Add Repository
 
 ```sh
-helm repo add dash-ops https://charts.dash-ops.github.io
+helm repo add dash-ops https://dash-ops.github.io/helm-charts
 helm repo update
 ```
 

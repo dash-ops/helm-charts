@@ -1,7 +1,7 @@
 name: dash-ops
 image:
   name: dashops/dash-ops
-  tag: latest
+  tag: 0.0.1
 
 container:
   limits:
