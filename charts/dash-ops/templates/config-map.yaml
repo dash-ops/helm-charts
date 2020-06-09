@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  labels:
+    app: {{.Values.name}}
+  name: {{.Values.name}}
+data:
+  dash-ops.yaml: |-
+{{ .Values.configMap | indent 4 }}

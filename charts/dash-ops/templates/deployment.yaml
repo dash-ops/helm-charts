@@ -45,6 +45,8 @@ spec:
           requests:
             memory: {{.Values.container.requests.memory}}
         env:
+        - name: DASH_CONFIG
+          value: /config/dash-ops.yaml
         {{- range $key, $value := .Values.container.env}}
         - name: {{$key}}
           value: "{{$value}}"
@@ -56,5 +58,12 @@ spec:
               name: {{$.Values.name}}
               key: {{$key}}
         {{- end}}
+        volumeMounts:
+        - name: config-volume
+          mountPath: /config
+      volumes:
+        - name: config-volume
+          configMap:
+            name: {{.Values.name}}
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
