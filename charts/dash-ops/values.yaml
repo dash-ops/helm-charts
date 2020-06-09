@@ -13,11 +13,13 @@ container:
     readinessDelay: 60
     livenessDelay: 180
     path: /api/health
-  env:
-    DASH_CONFIG: /dash-ops.yaml
+  env: {}
   secrets: {}
 
 ingress:
   enabled: false
   externalDNSTarget: traefik.local.
   hosts: []
+
+configMap: |
+  # Use the example found in the project readme: https://github.com/dash-ops/dash-ops#running-on-a-kubernetes-cluster
