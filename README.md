@@ -1,5 +1,7 @@
 # Dash-OPS Helm Charts
 
+![Release DashOps Charts](https://github.com/dash-ops/helm-charts/workflows/Release%20DashOps%20Charts/badge.svg)
+
 ## Introduction
 
 This chart bootstraps a DashOps deployment on a Kubernetes cluster using the Helm Package manager.
