@@ -5,15 +5,12 @@ metadata:
     app: {{.Values.name}}
   name: {{.Values.name}}
 rules:
-- apiGroups:
-  - extensions
-  - apps
-  resources:
-  - deployments
-  verbs:
-  - list
-  - update
-  - get
+- apiGroups: ["", "metrics.k8s.io", "extensions", "apps"] 
+  resources: ["pods/log", "events", "nodes", "namespaces", "pods", "deployments", "replicasets"]
+  verbs: ["get", "list", "watch"]
+- apiGroups: ["extensions", "apps"]
+  resources: ["deployments"]
+  verbs: ["update"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
