@@ -18,7 +18,7 @@ helm repo update
 ### Deploy
 
 ```sh
-helm install --name dash-ops dash-ops/dash-ops
+helm install dash-ops dash-ops/dash-ops
 ```
 
 ## Uninstalling the Chart
