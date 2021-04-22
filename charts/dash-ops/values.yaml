@@ -7,7 +7,7 @@ container:
   limits:
     memory: 600Mi
   requests:
-    memory: 600Mi  
+    memory: 600Mi
   httpPort: 8080
   probes:
     readinessDelay: 60
